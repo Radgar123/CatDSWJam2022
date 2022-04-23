@@ -21,9 +21,9 @@ public class Doors : MonoBehaviour
 
     public void ChangeToOpen()
     {
-        GetComponent<Rigidbody>().isKinematic = false;
-        GetComponent<MeshRenderer>().material = green;
-        GetComponentInChildren<Light>().color = GetComponent<MeshRenderer>().material.color;
+        GetComponentInChildren<Rigidbody>().isKinematic = false;
+        GetComponentInChildren<MeshRenderer>().material = green;
+        GetComponentInChildren<Light>().color = GetComponentInChildren<MeshRenderer>().material.color;
     }
 
     private void OnDestroy() {
