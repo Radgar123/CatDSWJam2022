@@ -7,6 +7,7 @@ public class Doors : MonoBehaviour
     public Rigidbody rb;
     public Material green;
     public MeshRenderer mesh;
+    public Light pointLight;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +22,13 @@ public class Doors : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(GameManager.Instance.collectedTreasure == true)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            GameManager.Instance.NextLevel();
+            if (GameManager.Instance.collectedTreasure == true)
+            {
+                GameManager.Instance.NextLevel();
+            }
         }
+        
     }
 }
