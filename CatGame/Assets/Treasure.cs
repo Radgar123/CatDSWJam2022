@@ -5,14 +5,7 @@ using UnityEngine;
 public class Treasure : MonoBehaviour
 {
     public float RotateSpeed;
-    public GameObject parent;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         transform.Rotate(0, 1f * RotateSpeed * Time.deltaTime, 0f, Space.Self);
@@ -22,9 +15,8 @@ public class Treasure : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            GameManager.Instance.collectedTreasure = true;
-            GameManager.Instance.OpenDoors();
-            Destroy(parent);
+            transform.parent.gameObject.SetActive(false);
+            GameManager.Instance.PlayerEat();
         }
     }
 }

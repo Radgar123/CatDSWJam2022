@@ -4,31 +4,29 @@ using UnityEngine;
 
 public class Doors : MonoBehaviour
 {
-    public Rigidbody rb;
-    public Material green;
-    public MeshRenderer mesh;
-    public Light pointLight;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Material green;
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+        GameManager.PlayerEatEvent += ChangeToOpen;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (GameManager.Instance.collectedTreasure == true)
-            {
-                GameManager.Instance.NextLevel();
-            }
-        }
-        
+            GameManager.Instance.PlayerAtDoors();
+        }   
+    }
+
+    public void ChangeToOpen()
+    {
+        GetComponent<Rigidbody>().isKinematic = false;
+        GetComponent<MeshRenderer>().material = green;
+        GetComponentInChildren<Light>().color = GetComponent<MeshRenderer>().material.color;
+    }
+
+    private void OnDestroy() {
+        GameManager.PlayerEatEvent -= ChangeToOpen;
     }
 }

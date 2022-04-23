@@ -6,50 +6,46 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    
-    public bool collectedTreasure, gameOver;
-    public Doors doors;
-    // Start is called before the first frame update
+
+    public delegate void OnPlayerSpotted();
+    public static event OnPlayerSpotted playerSpottedEvent;
+
+    public delegate void OnPlayerEat();
+    public static event OnPlayerEat PlayerEatEvent;
+
+    public delegate void OnPlayerDoors();
+    public static event OnPlayerDoors PlayerAtDoorsEvent;
+
     void Awake()
     {
-        doors = GameObject.FindGameObjectWithTag("Doors").GetComponent<Doors>();
-
         if (Instance == null)
         {
-           
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
         {
-            
             Destroy(gameObject);
         }
-       
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(doors == null)
-        {
-            doors = GameObject.FindGameObjectWithTag("Doors").GetComponent<Doors>();
-        }
-   
-    }
 
-    public void OpenDoors()
+
+
+
+    public void PlayerAtDoors()
     {
-        doors.rb.isKinematic = false;
-        doors.mesh.material = doors.green;
-        doors.pointLight.color = doors.mesh.material.color;
-        
-    }
-    public void NextLevel()
-    {
-        collectedTreasure = false;
+        PlayerAtDoorsEvent?.Invoke();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-       
+    }
+    public void PlayerSpotted()
+    {
+        playerSpottedEvent?.Invoke();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void PlayerEat()
+    {
+        PlayerEatEvent?.Invoke();
     }
    
 }

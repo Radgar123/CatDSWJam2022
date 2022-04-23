@@ -20,6 +20,7 @@ public class FieldOfView : MonoBehaviour
 
     private void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
+
         viewMesh = new Mesh();
         GetComponent<MeshFilter>().mesh = viewMesh;
 
@@ -50,6 +51,7 @@ public class FieldOfView : MonoBehaviour
                 {
                     //Player has been detected!
                     Debug.DrawLine(transform.position, player.transform.position, Color.green);
+					GameManager.Instance.PlayerSpotted();
                     return;
                 }
                 else
