@@ -12,23 +12,29 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        Invoke("OpenDoors", 5f);
+        doors = GameObject.FindGameObjectWithTag("Doors").GetComponent<Doors>();
+
         if (Instance == null)
         {
+           
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
         {
+            
             Destroy(gameObject);
         }
-        collectedTreasure = false;
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if(doors == null)
+        {
+            doors = GameObject.FindGameObjectWithTag("Doors").GetComponent<Doors>();
+        }
    
     }
 
@@ -36,10 +42,14 @@ public class GameManager : MonoBehaviour
     {
         doors.rb.isKinematic = false;
         doors.mesh.material = doors.green;
+        doors.pointLight.color = doors.mesh.material.color;
+        
     }
     public void NextLevel()
     {
+        collectedTreasure = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+       
     }
    
 }
