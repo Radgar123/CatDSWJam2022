@@ -9,7 +9,8 @@ public class Jump : MonoBehaviour
     [SerializeField] private float jumpPower = 10f;
     [SerializeField] private float gravityScale = 5;
     [SerializeField] private bool isGround;
-
+    [SerializeField] private ParticleSystem stopParticle;
+ 
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip jumpClip;
@@ -24,7 +25,7 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        CheckGroundToParticle();
     }
 
     private void FixedUpdate()
@@ -49,6 +50,19 @@ public class Jump : MonoBehaviour
         {
             isGround = false;
             audioSource.PlayOneShot(fallClip);
+        }
+    }
+
+    private void CheckGroundToParticle() 
+    {
+        if (isGround) 
+        {
+            stopParticle.Simulate(0, false, true);
+            stopParticle.Pause();
+        }
+        else 
+        {
+            stopParticle.Play();
         }
     }
 }
