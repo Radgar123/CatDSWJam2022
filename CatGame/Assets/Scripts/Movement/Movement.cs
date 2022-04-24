@@ -6,9 +6,20 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInput))]
 public class Movement : MonoBehaviour
 {
-    Vector2 movement;
+    public Vector2 movement;
+    public Vector2 temp;
+
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] GameObject GFX;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip moveClip;
+
+    private bool isPlay = false;
+
+    private void Start()
+    {
+        audioSource.clip = moveClip;
+    }
 
     // Update is called once per frame
     void Update()
@@ -18,8 +29,20 @@ public class Movement : MonoBehaviour
 
     private void Move() 
     {
+        if (movement.x == 0 && movement.y == 0) 
+        {
+            audioSource.Stop();
+            isPlay = false;
+        }
+        else if (!isPlay) 
+        {
+            isPlay = true;
+            audioSource.Play();
+        }
+
         Vector3 move = new Vector3(movement.x, 0, movement.y);
         transform.Translate(move * moveSpeed * Time.deltaTime);
+        temp = movement;
     }
 
     private void OnMove(InputValue value)
@@ -28,5 +51,7 @@ public class Movement : MonoBehaviour
         movement = value.Get<Vector2>();
         
         GFX.transform.LookAt(new Vector3((GFX.transform.position.x + movement.x), GFX.transform.position.y, (GFX.transform.position.z + movement.y)));
+
+        //audioSource.PlayOneShot(moveClip);
     }
 }
