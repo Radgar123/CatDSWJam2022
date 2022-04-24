@@ -14,7 +14,7 @@ public class Jump : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip jumpClip;
-    [SerializeField] private AudioClip fallClip;
+    //[SerializeField] private AudioClip fallClip;
 
     // Start is called before the first frame update
     void Start()
@@ -49,7 +49,7 @@ public class Jump : MonoBehaviour
         if (collision.transform.tag == "Ground" || collision.transform.tag =="Pushable")
         {
             isGround = false;
-            audioSource.PlayOneShot(fallClip);
+            //audioSource.PlayOneShot(fallClip);
         }
     }
 
