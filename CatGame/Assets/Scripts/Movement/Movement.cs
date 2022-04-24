@@ -14,6 +14,8 @@ public class Movement : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip moveClip;
 
+    [SerializeField] ParticleSystem moveParticle;
+
     private bool isPlay = false;
 
     private void Start()
@@ -33,11 +35,14 @@ public class Movement : MonoBehaviour
         {
             audioSource.Stop();
             isPlay = false;
+            moveParticle.Simulate(0, false, true);
+            moveParticle.Pause();
         }
         else if (!isPlay) 
         {
             isPlay = true;
             audioSource.Play();
+            moveParticle.Play();
         }
 
         Vector3 move = new Vector3(movement.x, 0, movement.y);
