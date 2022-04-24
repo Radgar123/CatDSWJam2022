@@ -22,6 +22,6 @@ public class UIEndButtons : MonoBehaviour
     }
 
     public void Credits(){
-
+        SceneManager.LoadScene("Credits");
     }
 }

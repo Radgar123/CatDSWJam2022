@@ -328,6 +328,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LoseCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3339270986455538995, guid: 26c93144a55249e4b937b0b00f68f5f3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3339270986455539007, guid: 26c93144a55249e4b937b0b00f68f5f3, type: 3}
       propertyPath: m_Pivot.x
       value: 0

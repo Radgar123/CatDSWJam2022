@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class QuickRestart : MonoBehaviour
+public class BeginGameSpace : MonoBehaviour
 {
-
     [SerializeField] private InputActionReference create;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +16,7 @@ public class QuickRestart : MonoBehaviour
 
     private void OnCreate(InputAction.CallbackContext obj)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void OnDisable() {
