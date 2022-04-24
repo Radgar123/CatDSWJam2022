@@ -18,7 +18,7 @@ public class UIEndButtons : MonoBehaviour
     }
 
     public void QuitGame(){
-
+        Application.Quit();
     }
 
     public void Credits(){
