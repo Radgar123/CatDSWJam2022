@@ -26,7 +26,8 @@ public class MouseHoverEffects : MonoBehaviour,IPointerEnterHandler,IPointerExit
     }
 
     IEnumerator InteractionDelay(){
-        yield return new WaitForSeconds(menuScreenFade.animTime);
+        if(menuScreenFade!=null)
+            yield return new WaitForSeconds(menuScreenFade.animTime);
         onAnimEnd?.Invoke();
     }
 
