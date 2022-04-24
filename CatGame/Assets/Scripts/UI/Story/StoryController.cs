@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StoryController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class StoryController : MonoBehaviour
             yield return new WaitForSeconds(3f);
             i++;
         }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     void DectivateAll(){
