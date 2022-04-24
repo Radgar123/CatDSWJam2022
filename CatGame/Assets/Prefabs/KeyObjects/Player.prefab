@@ -175,8 +175,6 @@ MonoBehaviour:
   temp: {x: 0, y: 0}
   moveSpeed: 6
   GFX: {fileID: 3317762580570180730}
-  audioSource: {fileID: 7351149867943650442}
-  moveClip: {fileID: 8300000, guid: f32ba10b9c8da7241bc32612d4553926, type: 3}
   moveParticle: {fileID: 498007600785333895}
 --- !u!114 &853671969768656906
 MonoBehaviour:
@@ -196,8 +194,7 @@ MonoBehaviour:
   isGround: 0
   stopParticle: {fileID: 498007600785333895}
   audioSource: {fileID: 6265431563684902241}
-  jumpClip: {fileID: 8300000, guid: 32d4b1811dda14a6cb9e059ee8ad17d2, type: 3}
-  fallClip: {fileID: 8300000, guid: 19f89c6e740e7447f9e12a8310d3e973, type: 3}
+  jumpClip: {fileID: 8300000, guid: 4b815d976fc91844dbf28da5ecd94415, type: 3}
 --- !u!114 &6241613488775906240
 MonoBehaviour:
   m_ObjectHideFlags: 0

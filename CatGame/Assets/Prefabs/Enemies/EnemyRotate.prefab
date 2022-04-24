@@ -245,7 +245,6 @@ GameObject:
   - component: {fileID: 2997244511371224073}
   - component: {fileID: 1130471724148272998}
   - component: {fileID: 6222374395301831915}
-  - component: {fileID: 7530535412258716306}
   m_Layer: 0
   m_Name: EnemyRotate
   m_TagString: Untagged
@@ -334,20 +333,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainSceneAudio: {fileID: 0}
   destroyClip: {fileID: 8300000, guid: 89e6bc608da7b47d4914f3d9c2484e48, type: 3}
---- !u!114 &7530535412258716306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7815374185242680115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d76a1ed371e938c478af9e8b4597bda1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 8649492076320971671}
-  audioClip: {fileID: 0}
 --- !u!1001 &5961343643193232290
 PrefabInstance:
   m_ObjectHideFlags: 0

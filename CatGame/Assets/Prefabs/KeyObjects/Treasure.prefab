@@ -4957,6 +4957,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotateSpeed: 100
+  audioSource: {fileID: 0}
+  grabClip: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
 --- !u!1001 &1941186147293062888
 PrefabInstance:
   m_ObjectHideFlags: 0
