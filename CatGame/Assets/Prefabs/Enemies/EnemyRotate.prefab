@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainSceneAudio: {fileID: 0}
-  destroyClip: {fileID: 8300000, guid: 89e6bc608da7b47d4914f3d9c2484e48, type: 3}
+  destroyClip: {fileID: 8300000, guid: 3becec1909f194046945d85ac1077772, type: 3}
 --- !u!1001 &5961343643193232290
 PrefabInstance:
   m_ObjectHideFlags: 0
