@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 5038845638992879575}
   - component: {fileID: 1364386025}
   - component: {fileID: 1364386026}
+  - component: {fileID: -2528867801049280621}
   m_Layer: 0
   m_Name: EnemyWalk
   m_TagString: Untagged
@@ -175,6 +176,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &-2528867801049280621
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5038845638992879568}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.96309066, z: 1}
+  m_Center: {x: 0, y: 0.47392988, z: 0}
 --- !u!1001 &7428740587224635637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -238,10 +252,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 4cffaeb50e557cc41aa616f226b9f218, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: da2460a48735ce847ae22b706c60ee68, type: 2}
     - target: {fileID: 919132149155446097, guid: 4cffaeb50e557cc41aa616f226b9f218, type: 3}
       propertyPath: m_Name
       value: blackCat
       objectReference: {fileID: 0}
+    - target: {fileID: 8442510506162454399, guid: 4cffaeb50e557cc41aa616f226b9f218, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: da2460a48735ce847ae22b706c60ee68, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cffaeb50e557cc41aa616f226b9f218, type: 3}
 --- !u!4 &6958775321012240158 stripped

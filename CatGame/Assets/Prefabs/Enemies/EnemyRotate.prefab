@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 53421e398574aac45a94fdfe0d915c53, type: 2}
+  - {fileID: 2100000, guid: 811ba8fc7fdcbf54986f70306c5a926f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 7815374185242680116}
   - component: {fileID: 2997244511371224074}
   - component: {fileID: 2997244511371224073}
+  - component: {fileID: 1130471724148272998}
   m_Layer: 0
   m_Name: EnemyRotate
   m_TagString: Untagged
@@ -175,6 +176,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &1130471724148272998
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7815374185242680115}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.94155836, z: 1}
+  m_Center: {x: 0, y: 0.5022533, z: 0}
 --- !u!1001 &5961343643193232290
 PrefabInstance:
   m_ObjectHideFlags: 0
