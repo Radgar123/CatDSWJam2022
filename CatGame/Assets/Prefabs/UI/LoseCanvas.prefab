@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3339270985996223979}
   - component: {fileID: 3339270985996223980}
   - component: {fileID: 3339270985996223978}
+  - component: {fileID: 8337749539728135356}
   m_Layer: 5
   m_Name: TryAgainBTN
   m_TagString: Untagged
@@ -170,10 +171,34 @@ MonoBehaviour:
         m_CallState: 2
   onAnimEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8337749539728135356}
+        m_TargetAssemblyTypeName: UIEndButtons, Assembly-CSharp
+        m_MethodName: TryAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   hoverColor: {r: 0.81568635, g: 0.46274513, b: 0, a: 1}
   image: {fileID: 0}
   menuScreenFade: {fileID: 3339270986648174874}
+--- !u!114 &8337749539728135356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3339270985996223983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 747e80835732f1d44b1a93f7d4d51254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3339270986036319812
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +506,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3339270986455539007
 RectTransform:
   m_ObjectHideFlags: 0
@@ -517,7 +542,7 @@ Canvas:
   m_GameObject: {fileID: 3339270986455538995}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1419,6 +1444,7 @@ GameObject:
   - component: {fileID: 3339270987607935902}
   - component: {fileID: 3339270987607935903}
   - component: {fileID: 3339270987607935901}
+  - component: {fileID: 3339270987484960155}
   m_Layer: 5
   m_Name: BakToMenuBTN
   m_TagString: Untagged
@@ -1577,10 +1603,34 @@ MonoBehaviour:
         m_CallState: 2
   onAnimEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3339270987484960155}
+        m_TargetAssemblyTypeName: UIEndButtons, Assembly-CSharp
+        m_MethodName: BackToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   hoverColor: {r: 0.25802776, g: 0.4528302, b: 0.33107874, a: 1}
   image: {fileID: 0}
   menuScreenFade: {fileID: 3339270986698227774}
+--- !u!114 &3339270987484960155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3339270987607935890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 747e80835732f1d44b1a93f7d4d51254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3339270987981097682
 GameObject:
   m_ObjectHideFlags: 0
