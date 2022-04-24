@@ -46,8 +46,11 @@ public class Movement : MonoBehaviour
         }
 
         Vector3 move = new Vector3(movement.x, 0, movement.y);
-        transform.Translate(move * moveSpeed * Time.deltaTime);
+        transform.Translate(move.normalized * moveSpeed * Time.deltaTime);
         temp = movement;
+
+        if(transform.position.y < -300)
+            GameManager.Instance.PlayerSpotted();
     }
 
     private void OnMove(InputValue value)
