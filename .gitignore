@@ -58,3 +58,8 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+CatGame/UserSettings/Layouts/default-2021.dwlt
+CatGame/UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+CatGame/UserSettings/EditorUserSettings.asset
+CatGame/ProjectSettings/ProjectSettings.asset
+CatGame/Assets/Scenes/UI_Scenes/MainMenu.unity
