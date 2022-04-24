@@ -6,6 +6,8 @@ public class Doors : MonoBehaviour
 {
     [SerializeField] Material green;
 
+    bool hasChangedToOpen = false;
+
     void Awake()
     {
         GameManager.PlayerEatEvent += ChangeToOpen;
@@ -13,7 +15,7 @@ public class Doors : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && hasChangedToOpen)
         {
             GameManager.Instance.PlayerAtDoors();
         }   
@@ -24,6 +26,8 @@ public class Doors : MonoBehaviour
         GetComponentInChildren<Rigidbody>().isKinematic = false;
         GetComponentInChildren<MeshRenderer>().material = green;
         GetComponentInChildren<Light>().color = GetComponentInChildren<MeshRenderer>().material.color;
+
+        hasChangedToOpen = true;
     }
 
     private void OnDestroy() {

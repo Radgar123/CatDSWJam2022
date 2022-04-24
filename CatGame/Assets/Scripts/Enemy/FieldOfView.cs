@@ -38,7 +38,14 @@ public class FieldOfView : MonoBehaviour
         // View Range
         float distanceToTarget = Vector3.Distance(transform.position, player.transform.position);
 
-        if(viewRadius > distanceToTarget)
+		if (distanceToTarget < 1)
+		{
+			//Spoted too close
+			GameManager.Instance.PlayerSpotted();
+			Debug.DrawLine(transform.position, player.transform.position, Color.black);
+			return;
+		}
+        else if(viewRadius > distanceToTarget)
         {
             // Angle Range
             Vector3 directionToPlayer = (player.transform.position - transform.position).normalized;
