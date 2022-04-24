@@ -11,8 +11,8 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] GameObject GFX;
-    [SerializeField] AudioSource audioSource;
-    [SerializeField] AudioClip moveClip;
+    //[SerializeField] AudioSource audioSource;
+    //[SerializeField] AudioClip moveClip;
 
     [SerializeField] ParticleSystem moveParticle;
 
@@ -20,10 +20,10 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
-        audioSource.clip = moveClip;
+        //audioSource.clip = moveClip;
     }
 
-    // Update is called once per frame
+    // Update is called once per frame  
     void Update()
     {
         Move();
@@ -33,7 +33,7 @@ public class Movement : MonoBehaviour
     {
         if (movement.x == 0 && movement.y == 0) 
         {
-            audioSource.Stop();
+            //audioSource.Stop();
             isPlay = false;
             moveParticle.Simulate(0, false, true);
             moveParticle.Pause();
@@ -41,7 +41,7 @@ public class Movement : MonoBehaviour
         else if (!isPlay) 
         {
             isPlay = true;
-            audioSource.Play();
+            //audioSource.Play();
             moveParticle.Play();
         }
 
