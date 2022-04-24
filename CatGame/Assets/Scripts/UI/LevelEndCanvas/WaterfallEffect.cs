@@ -6,11 +6,10 @@ public class WaterfallEffect : MonoBehaviour
 {
     public GameObject[] uiElements;
     private void OnEnable() {
-        GetComponent<Canvas>().worldCamera = Camera.main;
-        Animation();
+        StartCoroutine(Animation());
     }
 
-    void Animation(){
+    IEnumerator Animation(){
 
         foreach (var item in uiElements)
         {
@@ -20,6 +19,7 @@ public class WaterfallEffect : MonoBehaviour
         foreach (var item in uiElements)
         {
             item.SetActive(true);
+            yield return new WaitForSeconds(1f);
         }
     }
 

@@ -36,12 +36,12 @@ public class GameManager : MonoBehaviour
     public void PlayerAtDoors()
     {
         PlayerAtDoorsEvent?.Invoke();
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void PlayerSpotted()
     {
         playerSpottedEvent?.Invoke();
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void PlayerEat()
     {
