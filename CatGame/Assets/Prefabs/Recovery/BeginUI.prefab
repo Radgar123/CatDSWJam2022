@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 6750282644592262215}
   - component: {fileID: 6750282644592262214}
   - component: {fileID: 6750282644592262209}
-  - component: {fileID: 6750282644592262208}
+  - component: {fileID: 1837848711484782486}
   m_Layer: 5
   m_Name: BeginUI
   m_TagString: Untagged
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &6750282644592262208
+--- !u!114 &1837848711484782486
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6750282644592262211}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88287f904e2409f42a11b960431a9260, type: 3}
+  m_Script: {fileID: 11500000, guid: 28ddeceb2b06aa641b918569934803c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   footstepObj: {fileID: 6750282644023772486}
@@ -204,32 +204,23 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.16044956
-      value: 0.057589646
-      inSlope: 1.3382248
-      outSlope: 1.3382248
+      time: 0.20969366
+      value: 0.090968475
+      inSlope: 1.4417136
+      outSlope: 1.4417136
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.56050265
-      value: 0.94295883
-      inSlope: -0.38196197
-      outSlope: -0.38196197
+      time: 0.71041346
+      value: 0.8370507
+      inSlope: -2.1863284
+      outSlope: -2.1863284
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.62276924
-    - serializedVersion: 3
-      time: 0.77067816
-      value: 0.80253285
-      inSlope: 0.11367762
-      outSlope: 0.11367762
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 0.1544504
     - serializedVersion: 3
       time: 1
       value: 1
