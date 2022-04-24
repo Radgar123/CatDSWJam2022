@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8608791409887168632}
   - component: {fileID: 7103049513206000213}
   - component: {fileID: 2624321353961190340}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 160512304893604410}
   - component: {fileID: 7508613564129848625}
   - component: {fileID: 4990380275508268059}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NewDoors
   m_TagString: Doors
   m_Icon: {fileID: 0}
@@ -132,10 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa69333af63e5a1489899dd01e85e8a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 4990380275508268059}
   green: {fileID: 2100000, guid: 3642a3366bfb01948b868e43e7a05a88, type: 2}
-  mesh: {fileID: 8129933081694652186}
-  pointLight: {fileID: 6122069377267350355}
 --- !u!65 &7508613564129848625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -176,7 +173,7 @@ GameObject:
   - component: {fileID: 8946417612143357275}
   - component: {fileID: 420346575534365637}
   - component: {fileID: 8129933081694652186}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +256,7 @@ GameObject:
   - component: {fileID: 4223258000512153829}
   - component: {fileID: 6122069377267350355}
   - component: {fileID: 4657202404653818184}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
