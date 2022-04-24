@@ -6,6 +6,10 @@ public class Treasure : MonoBehaviour
 {
     public float RotateSpeed;
 
+    [Header("Audio")]
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip grabClip;
+
     void Update()
     {
         transform.Rotate(0, 1f * RotateSpeed * Time.deltaTime, 0f, Space.Self);
@@ -15,6 +19,7 @@ public class Treasure : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            audioSource.PlayOneShot(grabClip);
             transform.parent.gameObject.SetActive(false);
             GameManager.Instance.PlayerEat();
         }

@@ -10,6 +10,11 @@ public class Jump : MonoBehaviour
     [SerializeField] private float gravityScale = 5;
     [SerializeField] private bool isGround;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip jumpClip;
+    [SerializeField] private AudioClip fallClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +38,7 @@ public class Jump : MonoBehaviour
         {
             rb.AddForce(transform.up * jumpPower);
             isGround = true;
+            audioSource.PlayOneShot(jumpClip);
         }
         
     }
@@ -42,9 +48,7 @@ public class Jump : MonoBehaviour
         if (collision.transform.tag == "Ground" || collision.transform.tag =="Pushable")
         {
             isGround = false;
-
+            audioSource.PlayOneShot(fallClip);
         }
-    
-
     }
 }
