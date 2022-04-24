@@ -8,6 +8,7 @@ public class PlayRandomFoosteps : MonoBehaviour
     public Color[] colors;
     private IEnumerator Start() {
         int i = 0;
+        yield return new WaitForSeconds(2f);
         foreach(GameObject footstepPreset in footsteps)
         {
             footstepPreset.SetActive(true);

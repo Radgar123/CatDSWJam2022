@@ -460,7 +460,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43935066}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 867c5e434f6d81a419ca88d63692ca3f, type: 3}
@@ -1646,6 +1646,7 @@ GameObject:
   - component: {fileID: 283919530}
   - component: {fileID: 283919529}
   - component: {fileID: 283919531}
+  - component: {fileID: 283919532}
   m_Layer: 5
   m_Name: StartBTN
   m_TagString: Untagged
@@ -1791,10 +1792,34 @@ MonoBehaviour:
         m_CallState: 2
   onAnimEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 283919532}
+        m_TargetAssemblyTypeName: UIEndButtons, Assembly-CSharp
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   hoverColor: {r: 0.81568635, g: 0.46274513, b: 0, a: 1}
   image: {fileID: 0}
-  menuScreenFade: {fileID: 0}
+  menuScreenFade: {fileID: 1814734681}
+--- !u!114 &283919532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283919527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 747e80835732f1d44b1a93f7d4d51254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &285305501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2456,7 +2481,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364153393}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 867c5e434f6d81a419ca88d63692ca3f, type: 3}
@@ -3869,7 +3894,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514431948}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 898066016fd6a6e4e8469b039a6dbf0f, type: 3}
@@ -4221,7 +4246,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551748306}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f32ba10b9c8da7241bc32612d4553926, type: 3}
@@ -5720,7 +5745,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742808011}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 867c5e434f6d81a419ca88d63692ca3f, type: 3}
@@ -6378,7 +6403,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810300599}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 898066016fd6a6e4e8469b039a6dbf0f, type: 3}
@@ -12171,7 +12196,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494163659}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ae2e0563f1ff9b54284b6f9b8844a16b, type: 3}
@@ -12441,7 +12466,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545146969}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f32ba10b9c8da7241bc32612d4553926, type: 3}
@@ -13643,6 +13668,7 @@ GameObject:
   - component: {fileID: 1658430634}
   - component: {fileID: 1658430633}
   - component: {fileID: 1658430635}
+  - component: {fileID: 1658430636}
   m_Layer: 5
   m_Name: QuitBTN
   m_TagString: Untagged
@@ -13788,10 +13814,34 @@ MonoBehaviour:
         m_CallState: 2
   onAnimEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1658430636}
+        m_TargetAssemblyTypeName: UIEndButtons, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   hoverColor: {r: 0.6320754, g: 0.36477357, b: 0.014311123, a: 1}
   image: {fileID: 0}
-  menuScreenFade: {fileID: 0}
+  menuScreenFade: {fileID: 2077328842}
+--- !u!114 &1658430636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658430631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 747e80835732f1d44b1a93f7d4d51254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1660452265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13968,7 +14018,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674308649}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ae2e0563f1ff9b54284b6f9b8844a16b, type: 3}
@@ -14417,7 +14467,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740422904}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ae2e0563f1ff9b54284b6f9b8844a16b, type: 3}
@@ -15575,10 +15625,22 @@ MonoBehaviour:
         m_CallState: 2
   onAnimEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1950052246}
+        m_TargetAssemblyTypeName: UIEndButtons, Assembly-CSharp
+        m_MethodName: Credits
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   hoverColor: {r: 0.81568635, g: 0.46274513, b: 0, a: 1}
   image: {fileID: 0}
-  menuScreenFade: {fileID: 0}
+  menuScreenFade: {fileID: 2072194738}
 --- !u!114 &1950052246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15655,7 +15717,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1951691187}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f32ba10b9c8da7241bc32612d4553926, type: 3}
